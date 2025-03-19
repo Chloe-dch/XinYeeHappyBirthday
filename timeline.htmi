@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>派对流程 🎉</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        body {
+            background: url('background.jpg.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        h1 {
+            color: #ff4081;
+        }
+        .timeline {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .timeline p {
+            background: #ffeb3b;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .timeline p::before {
+            content: "🎈 ";
+            margin-right: 8px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .button {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+            <div class="timeline">
+            <p>6:30 🏡 抵达</p>
+            <p>7:00 🍽️ 用餐</p>
+            <p>8:00 🎂 切蛋糕</p>
+            <p>9:00 🙏 感谢到场</p>
+        </div>
+
+        <a href="index.html" class="button">返回主页</a>
+    </div>
+</body>
+</html>
