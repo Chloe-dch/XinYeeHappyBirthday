@@ -40,13 +40,13 @@
             z-index: 10;
             animation: swing 2s ease-in-out infinite alternate;
         }
-        @keyframes swing {
-            0% { transform: rotate(-5deg); }
-            100% { transform: rotate(5deg); }
-        }
-     .floating-character, .floating-item {
+       @keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-60px); }
+}
+    .floating-character, .floating-item {
     position: absolute;
-    max-width: 150px; /* 放大动画图片 */
+    max-width: 150px;
     max-height: 100px;
     animation: float 2s infinite alternate ease-in-out;
 }
@@ -54,13 +54,24 @@
             0% { transform: translateY(0px); }
             100% { transform: translateY(-60px); }
         }
-   .cake {
-    left: 30%; /* 例如增加 left 的值，向右移动 */
-    bottom: 120px;
-    width: 150px; /* 调小蛋糕大小 */
+  .cake {
+    left: 40%;  /* 适当右移 */
+    bottom: 100px;  /* 降低高度 */
+    width: 150px; 
 }
-        .balloon { top: 60%; right: 6%; animation-delay: 1.5s; }
-        .gift { bottom: 10%; left: 5%; transform: translateX(-50%); animation-delay: 2s; }
+
+.balloon {
+    top: 55%; 
+    right: 8%; /* 调整气球位置 */
+    animation-delay: 1.5s;
+}
+
+.gift {
+    bottom: 5%; /* 降低 gift，避免和蛋糕冲突 */
+    left: 10%;  /* 适当右移 */
+    transform: translateX(-50%);
+    animation-delay: 2s;
+}
         .button {
             display: inline-block;
             background: #ff4081;
@@ -109,12 +120,18 @@
     </div>
 
     <!-- 确保动画图片的 class 没问题 -->
-<img src="third.png" alt="可爱动画2" class="floating-character" 
-     style="top: 50%; right: 15%; animation-delay: 2s; transform: translateY(-50%);">
+.floating-character {
+    top: 50%;
+    transform: translateY(-50%);
+}
 
-<img src="second.png" alt="可爱动画1" class="floating-character" 
-     style="top: 50%; left: 5%; transform: translateY(-50%);">
+img[src="third.png"] {
+    right: 10%; /* 调整以便和 second.png 对齐 */
+}
 
+img[src="second.png"] {
+    left: 10%; /* 调整对齐 */
+}
     <img src="qiqiu.png" alt="气球" class="floating-item balloon">
     <img src="gift.png" alt="礼物" class="floating-item gift">
     <img src="cake.png" alt="蛋糕" class="floating-item cake">
