@@ -54,8 +54,8 @@
             0% { transform: translateY(0px); }
             100% { transform: translateY(-60px); }
         }
-    .cake {
-    right: 20%;
+   .cake {
+    left: 30%; /* 例如增加 left 的值，向右移动 */
     bottom: 120px;
     width: 150px; /* 调小蛋糕大小 */
 }
@@ -109,8 +109,11 @@
     </div>
 
     <!-- 确保动画图片的 class 没问题 -->
-    <img src="second.png" alt="可爱动画1" class="floating-character" style="top: 50%; left: 5%;">
-    <img src="third.png" alt="可爱动画2" class="floating-character" style="top: 50%; right: 10%; animation-delay: 2s;">
+<img src="third.png" alt="可爱动画2" class="floating-character" 
+     style="top: 50%; right: 15%; animation-delay: 2s; transform: translateY(-50%);">
+
+<img src="second.png" alt="可爱动画1" class="floating-character" 
+     style="top: 50%; left: 5%; transform: translateY(-50%);">
 
     <img src="qiqiu.png" alt="气球" class="floating-item balloon">
     <img src="gift.png" alt="礼物" class="floating-item gift">
