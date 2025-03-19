@@ -84,106 +84,12 @@
         <img src="cake.png" alt="蛋糕" class="floating-item cake">
         <img src="qiqiu.png" alt="气球" class="floating-item balloon">
         <img src="gift.png" alt="礼物" class="floating-item gift">
+        
+        <p>📍 地址：6, Laluan Mewah Indah 3</p>
+        <p><a href="https://maps.app.goo.gl/f9NHgekBHDrZtaxa7" target="_blank">点击查看 Google 地图</a></p>
+        
         <a href="timeline.html" class="button">查看派对流程 ⏰</a>
     </div>
-    <!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>派对流程 🎉</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
-        body {
-            background: url('background.jpg.jpeg') no-repeat center center fixed;
-            background-size: cover;
-            text-align: center;
-            font-family: 'Pacifico', cursive;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        h1 {
-            color: #ff4081;
-        }
-
-        .timeline {
-            text-align: left;
-            margin-top: 20px;
-        }
-
-        .timeline p {
-            background: #ffeb3b;
-            padding: 10px;
-            border-radius: 10px;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            margin: 10px 0;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        .timeline p::before {
-            content: "🎈 ";
-            margin-right: 8px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        button {
-            background-color: #ff4081;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 10px;
-            font-size: 18px;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #e91e63;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h1>⏰ 派对流程 🎈</h1>
-        <div class="timeline">
-            <p>6:30 🏡 抵达</p>
-            <p>7:00 🍽️ 用餐</p>
-            <p>8:00 🎂 切蛋糕</p>
-            <p>9:00 🙏 感谢到场</p>
-        </div>
-
-        <button onclick="window.location.href='
-
-    <button class="button" onclick="playMusic()">播放音乐 🎵</button>
-    <script>
-        function playMusic() {
-            let audio = document.getElementById("bg-music");
-            audio.muted = false;
-            audio.play().then(() => {
-                console.log("音乐播放成功");
-            }).catch(error => {
-                console.log("自动播放失败，用户需要手动交互:", error);
-            });
-        }
-    </script>
-    <audio id="bg-music" loop>
-        <source src="https://chloe-dch.github.io/My-Brithday-Invite/cutesong.mp3" type="audio/mpeg">
-    </audio>
 </body>
 </html>
+
