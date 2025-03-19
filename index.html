@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>焮釔的1周岁派对</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@700&display=swap');
+        
+        body {
+            background: url('background.jpg.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            font-family: 'Baloo Bhaijaan 2', cursive;
+            overflow: hidden;
+        }
+        
+         .container {
+          max-width: 600px;
+          margin: auto;
+          background: rgba(255, 255, 255, 0.8);
+          padding: 20px;
+          border-radius: 15px;
+          text-align: center;
+          position: relative;
+          min-height: 550px;
+        }
+
+        h1 {
+            color: #ff4081;
+        }
+
+        .quote {
+            font-size: 18px;
+            font-style: italic;
+            color: #ff4081;
+            margin-top: 10px;
+        }
+
+        /* 主角照片摇摆动画 */
+        .main-character {
+            position: absolute;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 110px;
+            z-index: 10;
+            animation: swing 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes swing {
+            0% { transform: translateX(-50%) rotate(-5deg); }
+            100% { transform: translateX(-50%) rotate(5deg); }
+        }
+
+        /* 可爱动画漂浮 */
+        .floating-character {
+            position: absolute;
+            width: 80px;
+            animation: float 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-30px); }
+        }
+
+        /* 新增：蛋糕、气球、礼物浮动画 */
+        .floating-item {
+            position: absolute;
+            width: 100px;
+            animation: float 4s infinite alternate ease-in-out;
+        }
+
+        .cake {
+            top: 70%;
+            left: 10%;
+            animation-delay: 1s;
+        }
+        
+        .balloon {
+            top: 30%;
+            right: 10%;
+            animation-delay: 1.5s;
+        }
+        
+        .gift {
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎉 欢迎来到焮釔的1周岁派对 🎂</h1>
+
+        <img src="main.jpeg" alt="主角" class="main-character">
+        <p class="quote">一岁啦！从呱呱坠地到牙牙学语，每一天都是满满的爱与成长💕</p>
+        
+        <!-- 可爱动画 -->
+        <img src="second.png.jpeg" alt="可爱动画1" class="floating-character" style="top: 60%; left: 5%;">
+        <img src="third.jpeg" alt="可爱动画2" class="floating-character" style="top: 40%; right: 5%; animation-delay: 2s;">
+
+        <!-- 新增：蛋糕、气球、礼物 -->
+        <img src="cake.png" alt="蛋糕" class="floating-item cake">
+        <img src="balloon.png" alt="气球" class="floating-item balloon">
+        <img src="gift.png" alt="礼物" class="floating-item gift">
+    </div>
+
+    <button onclick="playMusic()">播放音乐 🎵</button>
+
+    <script>
+        function playMusic() {
+            let audio = document.getElementById("bg-music");
+            audio.muted = false;
+            audio.play().then(() => {
+                console.log("音乐播放成功");
+            }).catch(error => {
+                console.log("自动播放失败，用户需要手动交互:", error);
+            });
+        }
+    </script>
+
+    <audio id="bg-music" loop>
+        <source src="https://chloe-dch.github.io/My-Brithday-Invite/cutesong.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
