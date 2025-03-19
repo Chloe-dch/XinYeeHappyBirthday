@@ -16,75 +16,84 @@
     height: 100vh;
 }
         .container {
-            max-width: 600px;
-            margin: auto;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 15px;
-            position: relative;
-            min-height: 550px;
-        }
-        h1 {
-            color: #ff4081;
-        }
-        .quote {
-            font-size: 18px;
-            font-style: italic;
-            color: #ff4081;
-            margin-top: 10px;
-        }
-        .main-character {
-    display: block; 
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    min-height: 550px;
+}
+
+h1 {
+    color: #ff4081;
+}
+
+.quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #ff4081;
+    margin-top: 10px;
+}
+
+.main-character {
+    display: block;
     margin: 0 auto;
     width: 450px;
     z-index: 10;
-    animation: swing 1.5s ease-in-out infinite alternate; /* 加快节奏 */
-    transform-origin: center top; /* 让它从顶部摆动 */
+    animation: swing 1.5s ease-in-out infinite alternate;
+    transform-origin: center top;
 }
-    @keyframes swing {
-    0% { transform: rotate(-10deg); } /* 角度加大 */
-    100% { transform: rotate(10deg); }
 
-    .floating-character, .floating-item {
+@keyframes swing {
+    0% { transform: rotate(-10deg); }
+    100% { transform: rotate(10deg); }
+}
+
+.floating-character, .floating-item {
     position: absolute;
     max-width: 150px;
     max-height: 100px;
     animation: float 2s infinite alternate ease-in-out;
 }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            100% { transform: translateY(-60px); }
-        }
-  .cake {
-    right: 4%;  /* 适当右移 */
-    bottom: 100px;  /* 降低高度 */
-    width: 150px; 
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-60px); }
+}
+
+.cake {
+    right: 4%;
+    bottom: 100px;
+    width: 150px;
 }
 
 .balloon {
-    top: 55%; 
-    right: 4%; /* 调整气球位置 */
+    top: 55%;
+    right: 4%;
     animation-delay: 1.5s;
 }
 
 .gift {
-    bottom: 10%; /* 降低 gift，避免和蛋糕冲突 */
-    left: 5%;  /* 适当右移 */
+    bottom: 10%;
+    left: 5%;
     transform: translateX(-50%);
     animation-delay: 2s;
 }
-        .button {
-            display: inline-block;
-            background: #ff4081;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 18px;
-            text-decoration: none;
-            margin-top: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-   @media (max-width: 768px) {
+
+.button {
+    display: inline-block;
+    background: #ff4081;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
     .floating-character, .floating-item {
         max-width: 100px;
         max-height: 100px;
@@ -96,7 +105,6 @@
         width: 150px;
         bottom: 130px;
     }
-}
     </style>
 </head>
 <body>
