@@ -32,31 +32,25 @@
             margin-top: 10px;
         }
         .main-character {
-            display: block; margin: 0 auto;
-            transform: translateX(-50%);
+            display: block; 
+            margin: 0 auto;
             width: 110px;
             z-index: 10;
             animation: swing 2s ease-in-out infinite alternate;
         }
         @keyframes swing {
-            0% { transform: translateX(-50%) rotate(-5deg); }
-            100% { transform: translateX(-50%) rotate(5deg); }
+            0% { transform: rotate(-5deg); }
+            100% { transform: rotate(5deg); }
         }
-        .floating-character {
-            position: relative;
-            width: 80px;
+        .floating-character, .floating-item {
+            position: absolute; /* 确保它们是绝对定位，不会被其他元素遮挡 */
             animation: float 3s infinite alternate ease-in-out;
         }
         @keyframes float {
             0% { transform: translateY(0px); }
             100% { transform: translateY(-30px); }
         }
-        .floating-item {
-            position: relative;
-            width: 100px;
-            animation: float 4s infinite alternate ease-in-out;
-        }
-        .cake { top: 70%; left: 10%; animation-delay: 1s; }
+        .cake { right: 10%; bottom: 150px; width: 120px; }
         .balloon { top: 30%; right: 10%; animation-delay: 1.5s; }
         .gift { bottom: 10%; left: 50%; transform: translateX(-50%); animation-delay: 2s; }
         .button {
@@ -70,35 +64,29 @@
             margin-top: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
-    </style>
-<head>
         @media (max-width: 768px) {
             .main-character {
-                width: 150px; /* 调小主角图片 */
+                width: 150px; 
                 left: 50%;
                 transform: translateX(-50%);
             }
-
-            .party-schedule ul li {
-                font-size: 1.2em; /* 增大字体 */
-            }
-
             .cake {
-                width: 80px; /* 缩小蛋糕，避免挡住地址 */
+                width: 80px; 
                 bottom: 50px;
             }
-
             .button {
-                font-size: 1.2em; /* 按钮更大 */
+                font-size: 1.2em; 
                 padding: 10px 15px;
             }
+        }
+    </style>
+</head>
 <body>
 <div class="container">
     <button class="button music-button" onclick="playMusic()">播放音乐 🎵</button>
 
     <h1>🎉 欢迎来到焞釔的1周岁派对 🎂</h1>
-
-    <p class="quote">一岁啦！从呕呕坠地到牙牙学语，每一天都是满满的爱与成长💕</p>
+    <p class="quote">一岁啦！从呱呱坠地到牙牙学语，每一天都是满满的爱与成长💕</p>
 
     <div class="main-character-wrapper" style="text-align: center; margin-top: 20px;">
         <img src="newmain.png" alt="主角" class="main-character" style="width: 200px;">
@@ -114,13 +102,13 @@
         </ul>
     </div>
 
+    <!-- 确保动画图片的 class 没问题 -->
     <img src="second.png" alt="可爱动画1" class="floating-character" style="top: 60%; left: 5%;">
     <img src="third.png" alt="可爱动画2" class="floating-character" style="top: 40%; right: 5%; animation-delay: 2s;">
 
     <img src="qiqiu.png" alt="气球" class="floating-item balloon">
     <img src="gift.png" alt="礼物" class="floating-item gift">
-
-    <img src="cake.png" alt="蛋糕" class="floating-item cake" style="position: absolute; right: 10%; bottom: 150px; width: 120px;">
+    <img src="cake.png" alt="蛋糕" class="floating-item cake">
 
     <h2>📍 地点</h2>
     <p>6, Laluan Mewah Indah 3</p>
@@ -145,4 +133,6 @@
 
 </body>
 </html>
+
+
 
