@@ -5,39 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>焮釔的1周岁派对</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@700&display=swap');
-        
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
         body {
             background: url('background.jpg.jpeg') no-repeat center center fixed;
             background-size: cover;
             text-align: center;
-            font-family: 'Baloo Bhaijaan 2', cursive;
+            font-family: 'Pacifico', 'Comic Sans MS', cursive;
             overflow: hidden;
         }
-        
-         .container {
-          max-width: 600px;
-          margin: auto;
-          background: rgba(255, 255, 255, 0.8);
-          padding: 20px;
-          border-radius: 15px;
-          text-align: center;
-          position: relative;
-          min-height: 550px;
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            position: relative;
+            min-height: 550px;
         }
-
         h1 {
             color: #ff4081;
         }
-
         .quote {
             font-size: 18px;
             font-style: italic;
             color: #ff4081;
             margin-top: 10px;
         }
-
-        /* 主角照片摇摆动画 */
         .main-character {
             position: absolute;
             top: 200px;
@@ -47,71 +40,137 @@
             z-index: 10;
             animation: swing 2s ease-in-out infinite alternate;
         }
-
         @keyframes swing {
             0% { transform: translateX(-50%) rotate(-5deg); }
             100% { transform: translateX(-50%) rotate(5deg); }
         }
-
-        /* 可爱动画漂浮 */
         .floating-character {
             position: absolute;
             width: 80px;
             animation: float 3s infinite alternate ease-in-out;
         }
-
         @keyframes float {
             0% { transform: translateY(0px); }
             100% { transform: translateY(-30px); }
         }
-
-        /* 新增：蛋糕、气球、礼物浮动画 */
         .floating-item {
             position: absolute;
             width: 100px;
             animation: float 4s infinite alternate ease-in-out;
         }
+        .cake { top: 70%; left: 10%; animation-delay: 1s; }
+        .balloon { top: 30%; right: 10%; animation-delay: 1.5s; }
+        .gift { bottom: 10%; left: 50%; transform: translateX(-50%); animation-delay: 2s; }
+        .button {
+            display: inline-block;
+            background: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 18px;
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 欢迎来到焮釔的1周岁派对 🎂</h1>
+        <img src="newmain.png" alt="主角" class="main-character">
+        <p class="quote">一岁啦！从呱呱坠地到牙牙学语，每一天都是满满的爱与成长💕</p>
+        <img src="second.png" alt="可爱动画1" class="floating-character" style="top: 60%; left: 5%;">
+        <img src="third.png" alt="可爱动画2" class="floating-character" style="top: 40%; right: 5%; animation-delay: 2s;">
+        <img src="cake.png" alt="蛋糕" class="floating-item cake">
+        <img src="qiqiu.png" alt="气球" class="floating-item balloon">
+        <img src="gift.png" alt="礼物" class="floating-item gift">
+        <a href="timeline.html" class="button">查看派对流程 ⏰</a>
+    </div>
+    <!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>派对流程 🎉</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
-        .cake {
-            top: 70%;
-            left: 10%;
-            animation-delay: 1s;
+        body {
+            background: url('background.jpg.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            font-family: 'Pacifico', cursive;
         }
-        
-        .balloon {
-            top: 30%;
-            right: 10%;
-            animation-delay: 1.5s;
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
         }
-        
-        .gift {
-            bottom: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            animation-delay: 2s;
+
+        h1 {
+            color: #ff4081;
+        }
+
+        .timeline {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .timeline p {
+            background: #ffeb3b;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .timeline p::before {
+            content: "🎈 ";
+            margin-right: 8px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        button {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e91e63;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>🎉 欢迎来到焮釔的1周岁派对 🎂</h1>
+        <h1>⏰ 派对流程 🎈</h1>
+        <div class="timeline">
+            <p>6:30 🏡 抵达</p>
+            <p>7:00 🍽️ 用餐</p>
+            <p>8:00 🎂 切蛋糕</p>
+            <p>9:00 🙏 感谢到场</p>
+        </div>
 
-        <img src="main.png" alt="主角" class="main-character">
-        <p class="quote">一岁啦！从呱呱坠地到牙牙学语，每一天都是满满的爱与成长💕</p>
-        
-        <!-- 可爱动画 -->
-        <img src="second.png" alt="可爱动画1" class="floating-character" style="top: 60%; left: 5%;">
-        <img src="third.png" alt="可爱动画2" class="floating-character" style="top: 40%; right: 5%; animation-delay: 2s;">
+        <button onclick="window.location.href='
 
-        <!-- 新增：蛋糕、气球、礼物 -->
-        <img src="cake.png" alt="蛋糕" class="floating-item cake">
-        <img src="qiqiu.png" alt="气球" class="floating-item balloon">
-        <img src="gift.png" alt="礼物" class="floating-item gift">
-    </div>
-
-    <button onclick="playMusic()">播放音乐 🎵</button>
-
+    <button class="button" onclick="playMusic()">播放音乐 🎵</button>
     <script>
         function playMusic() {
             let audio = document.getElementById("bg-music");
@@ -123,7 +182,6 @@
             });
         }
     </script>
-
     <audio id="bg-music" loop>
         <source src="https://chloe-dch.github.io/My-Brithday-Invite/cutesong.mp3" type="audio/mpeg">
     </audio>
