@@ -32,9 +32,7 @@
             margin-top: 10px;
         }
         .main-character {
-            position: absolute;
-            top: 200px;
-            left: 50%;
+            display: block; margin: 0 auto;
             transform: translateX(-50%);
             width: 110px;
             z-index: 10;
@@ -45,7 +43,7 @@
             100% { transform: translateX(-50%) rotate(5deg); }
         }
         .floating-character {
-            position: absolute;
+            position: relative;
             width: 80px;
             animation: float 3s infinite alternate ease-in-out;
         }
@@ -54,7 +52,7 @@
             100% { transform: translateY(-30px); }
         }
         .floating-item {
-            position: absolute;
+            position: relative;
             width: 100px;
             animation: float 4s infinite alternate ease-in-out;
         }
@@ -73,7 +71,27 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
     </style>
-</head>
+<head>
+        @media (max-width: 768px) {
+            .main-character {
+                width: 150px; /* 调小主角图片 */
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .party-schedule ul li {
+                font-size: 1.2em; /* 增大字体 */
+            }
+
+            .cake {
+                width: 80px; /* 缩小蛋糕，避免挡住地址 */
+                bottom: 50px;
+            }
+
+            .button {
+                font-size: 1.2em; /* 按钮更大 */
+                padding: 10px 15px;
+            }
 <body>
 <div class="container">
     <button class="button music-button" onclick="playMusic()">播放音乐 🎵</button>
