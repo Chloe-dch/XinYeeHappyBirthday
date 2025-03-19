@@ -36,7 +36,7 @@
         .main-character {
             display: block; 
             margin: 0 auto;
-            width: 260px;
+            width: 300px;
             z-index: 10;
             animation: swing 2s ease-in-out infinite alternate;
         }
@@ -46,7 +46,7 @@
         }
      .floating-character, .floating-item {
     position: absolute;
-    max-width: 130px; /* 放大动画图片 */
+    max-width: 150px; /* 放大动画图片 */
     max-height: 100px;
     animation: float 3s infinite alternate ease-in-out;
 }
@@ -57,7 +57,7 @@
     .cake {
     right: 10%;
     bottom: 150px;
-    width: 130px; /* 调小蛋糕大小 */
+    width: 150px; /* 调小蛋糕大小 */
 }
         .balloon { top: 50%; right: 10%; animation-delay: 1.5s; }
         .gift { bottom: 10%; left: 10%; transform: translateX(-50%); animation-delay: 2s; }
@@ -74,15 +74,15 @@
         }
    @media (max-width: 768px) {
     .floating-character, .floating-item {
-        max-width: 80px;
-        max-height: 80px;
+        max-width: 100px;
+        max-height: 100px;
     }
     .main-character {
-        max-width: 260px;
+        max-width: 300px;
     }
     .cake, .gift {
-        width: 130px;
-        bottom: 100px;
+        width: 150px;
+        bottom: 150px;
     }
 }
     </style>
@@ -109,7 +109,7 @@
     </div>
 
     <!-- 确保动画图片的 class 没问题 -->
-    <img src="second.png" alt="可爱动画1" class="floating-character" style="top: 30%; left: 5%;">
+    <img src="second.png" alt="可爱动画1" class="floating-character" style="top: 50%; left: 5%;">
     <img src="third.png" alt="可爱动画2" class="floating-character" style="top: 40%; right: 5%; animation-delay: 2s;">
 
     <img src="qiqiu.png" alt="气球" class="floating-item balloon">
