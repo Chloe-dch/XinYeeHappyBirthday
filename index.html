@@ -36,7 +36,7 @@
         .main-character {
             display: block; 
             margin: 0 auto;
-            width: 110px;
+            width: 210px;
             z-index: 10;
             animation: swing 2s ease-in-out infinite alternate;
         }
@@ -44,15 +44,15 @@
             0% { transform: rotate(-5deg); }
             100% { transform: rotate(5deg); }
         }
-      .floating-character, .floating-item {
+     .floating-character, .floating-item {
     position: absolute;
-    max-width: 80px; /* 限制图片最大宽度 */
-    max-height: 80px;
+    max-width: 100px; /* 放大动画图片 */
+    max-height: 100px;
     animation: float 3s infinite alternate ease-in-out;
 }
         @keyframes float {
             0% { transform: translateY(0px); }
-            100% { transform: translateY(-30px); }
+            100% { transform: translateY(-40px); }
         }
     .cake {
     right: 10%;
@@ -60,7 +60,7 @@
     width: 100px; /* 调小蛋糕大小 */
 }
         .balloon { top: 30%; right: 10%; animation-delay: 1.5s; }
-        .gift { bottom: 10%; left: 50%; transform: translateX(-50%); animation-delay: 2s; }
+        .gift { bottom: 10%; right: 20%; transform: translateX(-50%); animation-delay: 2s; }
         .button {
             display: inline-block;
             background: #ff4081;
@@ -72,16 +72,16 @@
             margin-top: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
-     @media (max-width: 768px) {
+   @media (max-width: 768px) {
     .floating-character, .floating-item {
-        max-width: 60px;
-        max-height: 60px;
+        max-width: 80px;
+        max-height: 80px;
     }
     .main-character {
-        max-width: 150px;
+        max-width: 200px;
     }
-    .cake {
-        width: 80px;
+    .cake, .gift {
+        width: 90px;
         bottom: 100px;
     }
 }
