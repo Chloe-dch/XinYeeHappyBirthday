@@ -34,16 +34,17 @@
             margin-top: 10px;
         }
         .main-character {
-            display: block; 
-            margin: 0 auto;
-            width: 450px;
-            z-index: 10;
-            animation: swing 2s ease-in-out infinite alternate;
-        }
-       @keyframes float {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-60px); }
+    display: block; 
+    margin: 0 auto;
+    width: 450px;
+    z-index: 10;
+    animation: swing 1.5s ease-in-out infinite alternate; /* 加快节奏 */
+    transform-origin: center top; /* 让它从顶部摆动 */
 }
+    @keyframes swing {
+    0% { transform: rotate(-10deg); } /* 角度加大 */
+    100% { transform: rotate(10deg); }
+
     .floating-character, .floating-item {
     position: absolute;
     max-width: 150px;
